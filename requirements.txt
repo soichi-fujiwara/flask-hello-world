@@ -1,2 +1,5 @@
 Flask
 numpy
+mecab-python3
+gensim
+re
