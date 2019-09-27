@@ -58,7 +58,7 @@ def post():
         #model rorded check
         #**************************************************************************
         try:
-          if model == '':
+          if model is None:
             pass
           else:
             #roaded
@@ -66,7 +66,7 @@ def post():
         except NameError as error:
           #read model #1
           model_dir = 'https://storage.cloud.google.com/ml_bucket_01/wiki_tohoku.model?hl=ja&walkthrough_tutorial_id=python_gae_quickstart'
-          model = KeyedVectors.load(content)
+          model = KeyedVectors.load(model_dir)
           #read model #2
           #model = pickle.load(open('./drive/My Drive/NLP/wiki_tohoku_pkl.sav', 'rb'))
 
