@@ -58,7 +58,7 @@ def post():
         #model rorded check
         #**************************************************************************
         try:
-          if model is None:
+          if 'model' in globals():
             pass
           else:
             #roaded
