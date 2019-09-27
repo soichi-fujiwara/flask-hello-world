@@ -17,14 +17,14 @@ def picked_up():
 # Routing
 @app.route('/')
 def index():
-    title = "ようこそ"
+    title = "ようこそ！"
     message = picked_up()
     return render_template('index.html',
                            message=message, title=title)
 
 @app.route('/post', methods=['POST', 'GET'])
 def post():
-    title = "こんにちは"
+    title = "こんにちは！"
     rev_word = "TEST"
     if request.method == 'POST':
         name = request.form['name']
