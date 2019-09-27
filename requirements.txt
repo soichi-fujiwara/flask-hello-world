@@ -3,4 +3,3 @@ numpy
 pandas
 mecab-python3
 gensim
-re
