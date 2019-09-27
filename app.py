@@ -58,10 +58,10 @@ def post():
         #model rorded check
         #**************************************************************************
         #read model #1
-        model_dir = 'https://storage.cloud.google.com/ml_bucket_01/wiki_tohoku.model?hl=ja&walkthrough_tutorial_id=python_gae_quickstart'
-        model = KeyedVectors.load(model_dir)
+        #model_dir = 'https://storage.cloud.google.com/ml_bucket_01/wiki_tohoku.model?hl=ja&walkthrough_tutorial_id=python_gae_quickstart'
+        #model = KeyedVectors.load(model_dir)
         #read model #2
-        #model = pickle.load(open('./drive/My Drive/NLP/wiki_tohoku_pkl.sav', 'rb'))
+        model = pickle.load(open('./drive/My Drive/NLP/wiki_tohoku_pkl.sav', 'rb'))
 
         #MAIN
         words = words[0:15]
