@@ -46,8 +46,7 @@ def post():
     blob = gcs.Blob(fname, bucket)
     content = blob.download_as_string()
 
-    df = pd.read_csv(content)
-    rev_word = df[0][0]
+    rev_word = content
     #TEST
     
     if request.method == 'POST':
