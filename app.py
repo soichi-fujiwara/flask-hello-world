@@ -25,10 +25,11 @@ def index():
 @app.route('/post', methods=['POST', 'GET'])
 def post():
     title = "こんにちは"
+    rev_word = "TEST"
     if request.method == 'POST':
         name = request.form['name']
         return render_template('index.html',
-                               name=name, title=title)
+                               name=name, title=title,rev_word=rev_word)
     else:
         return redirect(url_for('index'))
 
