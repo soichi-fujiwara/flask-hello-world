@@ -26,6 +26,30 @@ def index():
 def post():
     title = "こんにちは！"
     rev_word = "TEST"
+
+    #TEST
+    from google.cloud import storage as gcs
+    import pandas as pd
+
+    bucket_name = 'ml_bucket_01'
+    #fname = 'wiki_tohoku.model'
+    fname = 'sample.txt'
+    project_name = 'My First Project'
+
+    #プロジェクト名を指定してclientを作成
+    client = gcs.Client(project_name)
+
+    #バケット名を指定してbucketを取得
+    bucket = client.get_bucket(bucket_name)
+
+    #Blobを作成
+    blob = gcs.Blob(fname, bucket)
+    content = blob.download_as_string()
+
+    df = pd.read_csv(content)
+    rev_word = df[0][0]
+    #TEST
+    
     if request.method == 'POST':
         name = request.form['name']
         return render_template('index.html',
