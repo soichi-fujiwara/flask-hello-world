@@ -63,7 +63,7 @@ def post():
         #model_dir = 'https://storage.cloud.google.com/ml_bucket_01/wiki_tohoku.model?hl=ja&walkthrough_tutorial_id=python_gae_quickstart'
         #model = KeyedVectors.load(model_dir)
         #read model #2
-        model = pickle.load(open('https://storage.cloud.google.com/ml_bucket_01/wiki_tohoku_pkl.sav?hl=ja', 'rb'))
+        model = pickle.load(open('gs://ml_bucket_01/wiki_tohoku_pkl.sav', 'rb'))
 
         #MAIN
         words = words[0:15]
