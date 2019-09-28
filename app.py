@@ -2,7 +2,9 @@
 
 from flask import Flask, render_template, request, redirect, url_for
 import numpy as np
+import pickle
 from gensim.models import KeyedVectors
+
 #対義語生成
 import lib_wordRevChange as lw
 
