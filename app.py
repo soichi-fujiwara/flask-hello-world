@@ -42,7 +42,7 @@ def post():
         import pandas as pd
 
         bucket_name = 'ml_bucket_01'
-        fname = 'wiki_tohoku.model'
+        fname = 'wiki_tohoku_pkl.sav'
         #fname = 'sample.txt'
         project_name = 'My First Project'
 
@@ -54,7 +54,8 @@ def post():
 
         #Blobを作成
         blob = gcs.Blob(fname, bucket)
-        content = blob.download_as_string()
+        #content = blob.download_as_string()
+        model = blob.download_as_string()
 
         #**************************************************************************
         #model rorded check
@@ -63,7 +64,7 @@ def post():
         #model_dir = 'https://storage.cloud.google.com/ml_bucket_01/wiki_tohoku.model?hl=ja&walkthrough_tutorial_id=python_gae_quickstart'
         #model = KeyedVectors.load(model_dir)
         #read model #2
-        model = pickle.load(open('gs://ml_bucket_01/wiki_tohoku_pkl.sav', 'rb'))
+        #model = pickle.load(open('gs://ml_bucket_01/wiki_tohoku_pkl.sav', 'rb'))
 
         #MAIN
         words = words[0:15]
