@@ -42,8 +42,7 @@ def post():
         import pandas as pd
 
         bucket_name = 'ml_bucket_01'
-        fname = 'wiki_tohoku_pkl.sav'
-        #fname = 'sample.txt'
+        fname = 'wiki_tohoku_pkl_500000.sav'
         project_name = 'My First Project'
 
         #プロジェクト名を指定してclientを作成
